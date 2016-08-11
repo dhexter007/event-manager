@@ -17,7 +17,7 @@ class CreateUserTable extends Migration
             //account
             $table->string('username');
             $table->string('password');
-            $table->integer('role_id')->unassign();
+            $table->integer('role_id')->unsigned();
             
             //contact
             $table->string('celular');

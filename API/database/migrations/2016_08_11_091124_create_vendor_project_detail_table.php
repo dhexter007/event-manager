@@ -14,7 +14,7 @@ class CreateVendorProjectDetailTable extends Migration
     {
         Schema::create('vendor_project_details', function (Blueprint $table) {
             $table->increments('vp_detail_id');
-            $table->integer('vp_id')->unassign();
+            $table->integer('vp_id')->unsigned();
             $table->string('vp_detail_picture');
             $table->string('vp_detail_desc');
 
@@ -23,7 +23,6 @@ class CreateVendorProjectDetailTable extends Migration
                 ->on('vendor_projects')
                 ->onUpdate('cascade')
                 ->onDelete('restrict');
-        });
         });
     }
 

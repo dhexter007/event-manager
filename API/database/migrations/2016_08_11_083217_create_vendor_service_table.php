@@ -14,8 +14,8 @@ class CreateVendorServiceTable extends Migration
     {
         Schema::create('vendor_services', function (Blueprint $table) {
             $table->increments('vs_id');
-            $table->integer('user_id');
-            $table->integer('service_id');
+            $table->integer('user_id')->unsigned();
+            $table->integer('service_id')->unsigned();
             $table->string('service_description');
 
             $table->foreign('user_id')

@@ -14,7 +14,7 @@ class CreateVendorProjectTable extends Migration
     {
         Schema::create('vendor_projects', function (Blueprint $table) {
             $table->increments('vp_id');
-            $table->integer('vs_id')->unassign();
+            $table->integer('vs_id')->unsigned();
             $table->string('project_title');
             $table->string('project_desc');
             $table->string('project_cover');
